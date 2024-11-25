@@ -1,8 +1,17 @@
+
 {
+  "name": "seu-projeto",
+  "version": "1.0.0",
+  "description": "Descrição do seu projeto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.3",
-    "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^6.7.2",
+    "dotenv": "^16.4.5"
   }
 }
+
