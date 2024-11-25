@@ -1,0 +1,2037 @@
+/*Fonts*/
+
+@font-face {
+    font-family: Kirgina;
+    src: url(assets/fonts/Kirgina\ DEMO.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  .passion-one-regular {
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .passion-one-bold {
+    font-family: "Passion One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .passion-one-black {
+    font-family: "Passion One", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  
+/*Fonts*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+background-color: #131313;
+
+}
+
+/* macbook */
+.macbook {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 102vh;
+  top: 129vh;
+  margin: -75px 0 0 -48px;
+  perspective: 500px;
+}
+.shadow {
+  position: absolute;
+  width: 60px;
+  height: 0px;
+  left: 40px;
+  top: 160px;
+  transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
+  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  animation: shadow infinite 7s ease;
+}
+.inner {
+  z-index: 20;
+  position: absolute;
+  width: 150px;
+  height: 96px;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  transform:rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+  animation: rotate infinite 7s ease;
+}
+.screen {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: #ddd;
+  transform-style: preserve-3d;
+  transform-origin: 50% 93px;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  animation: lid-screen infinite 7s ease;
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.34) 0%,rgba(0,0,0,0) 100%);
+  background-position: left bottom;
+  background-size: 300px 300px;
+  box-shadow: inset 0 3px 7px rgba(255,255,255,0.5);
+}
+.screen .logo {
+  position: absolute;
+  width: 20px;
+  height: 24px;
+  left: 50%;
+  top: 50%;
+  margin: -12px 0 0 -10px;
+  transform: rotateY(180deg) translateZ(0.1px);
+}
+.screen .face-one {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: #d3d3d3;
+  transform: translateZ(2px);
+  background-image: linear-gradient(45deg,rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+}
+.screen .face-one .camera {
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  margin-left: -1.5px;
+}
+.screen .face-one .display {
+  width: 130px;
+  height: 74px;
+  margin: 10px;
+  background: url("https://upload.wikimedia.org/wikipedia/en/9/98/MacOS_Monterey_Desktop.png") no-repeat center center #000;
+  background-size: 100% 100%;
+  border-radius: 1px;
+  position: relative;
+  box-shadow: inset 0 0 2px rgba(0,0,0,1);
+}
+.screen .face-one .display .shade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 74px;
+  background: linear-gradient(-135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 47%,rgba(255,255,255,0) 48%);
+  animation: screen-shade infinite 7s ease;
+  background-size: 300px 200px;
+  background-position: 0px 0px;
+}
+.screen .face-one span {
+  position: absolute;
+  top: 85px;
+  left: 57px;
+  font-size: 6px;
+  color: #666
+}
+
+.body {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: #cbcbcb;
+  transform-style: preserve-3d;
+  transform-origin: 50% bottom;
+  transform: rotateX(-90deg);
+  animation: lid-body infinite 7s ease;
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+}
+.body .face-one {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  transform-style: preserve-3d;
+  background: #dfdfdf;
+  animation: lid-keyboard-area infinite 7s ease;
+  transform: translateZ(-2px);
+  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+}
+.body .touchpad {
+  width: 40px;
+  height: 31px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  margin: -44px 0 0 -18px;
+  background: #cdcdcd;
+  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+  box-shadow: inset 0 0 3px #888;
+}
+.body .keyboard {
+width: 130px;
+height: 45px;
+position: absolute;
+left: 7px;
+top: 41px;
+border-radius: 4px;
+transform-style: preserve-3d;
+background: #cdcdcd;
+background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+box-shadow: inset 0 0 3px #777;
+padding: 0 0 0 2px;
+}
+.keyboard .key {
+  width: 6px;
+  height: 6px;
+  background: #444;
+  float: left;
+  margin: 1px;
+  transform: translateZ(-2px);
+  border-radius: 2px;
+  box-shadow: 0 -2px 0 #222;
+  animation: keys infinite 7s ease;
+}
+.key.space {
+  width: 45px;
+}
+.key.f {
+  height: 3px;
+}
+.body .pad {
+  width: 5px;
+  height: 5px;
+  background: #333;
+  border-radius: 100%;
+  position: absolute;
+}
+.pad.one {
+  left: 20px;
+  top: 20px;
+}
+.pad.two {
+  right: 20px;
+  top: 20px;
+}
+.pad.three {
+  right: 20px;
+  bottom: 20px;
+}
+.pad.four {
+  left: 20px;
+  bottom: 20px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+  }
+  5% {
+    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(0deg);
+  }
+  20% {
+    transform: rotateX(30deg) rotateY(200deg) rotateZ(0deg);
+  }
+  25% {
+    transform: rotateX(-60deg) rotateY(150deg) rotateZ(0deg);
+  }
+  60% {
+    transform: rotateX(-20deg) rotateY(130deg) rotateZ(0deg);
+  }
+  65% {
+    transform: rotateX(-20deg) rotateY(120deg) rotateZ(0deg);
+  }
+  80% {
+    transform: rotateX(-20deg) rotateY(375deg) rotateZ(0deg);
+  }
+  85% {
+    transform: rotateX(-20deg) rotateY(357deg) rotateZ(0deg);
+  }
+  87% {
+    transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+@keyframes lid-screen {
+  0% {
+    transform: rotateX(0deg);
+    background-position: left bottom;
+  }
+  5% {
+    transform: rotateX(50deg);
+    background-position: left bottom;
+  }
+  20% {
+    transform: rotateX(-90deg);
+    background-position: -150px top;
+  }
+  25% {
+    transform: rotateX(15deg);
+    background-position: left bottom;
+  }
+  30% {
+    transform: rotateX(-5deg);
+    background-position: right top;
+  }
+  38% {
+    transform: rotateX(5deg);
+    background-position: right top;
+  }
+  48% {
+    transform: rotateX(0deg);
+    background-position: right top;
+  }
+  90% {
+    transform: rotateX(0deg);
+    background-position: right top;
+  }
+  100% {
+    transform: rotateX(0deg);
+    background-position: right center;
+  }
+}
+
+@keyframes lid-body {
+  0% {
+    transform: rotateX(-90deg);
+    
+  }
+  50% {
+    transform: rotateX(-90deg);
+    
+  }
+  100% {
+    transform: rotateX(-90deg);
+    
+  }
+}
+
+@keyframes lid-keyboard-area {
+  0% {
+     background-color: #dfdfdf;
+  }
+  50% {
+    background-color: #bbb;
+  }
+  100% {
+    background-color: #dfdfdf;
+  }
+}
+@keyframes screen-shade {
+  0% {
+    background-position: -20px 0px;
+  }
+  5% {
+    background-position: -40px 0px;
+  }
+  20% {
+    background-position: 200px 0;
+  }
+  50% {
+    background-position: -200px 0;
+  }
+  80% {
+    background-position: 0px 0px;
+  }
+  85% {
+    background-position: -30px 0;
+  }
+  90% {
+    background-position: -20px 0;
+  }
+  100% {
+    background-position: -20px 0px;
+  }
+}
+@keyframes keys {
+  0% {
+    box-shadow: 0 -2px 0 #222;
+  }
+  5% {
+    box-shadow: 1 -1px 0 #222;
+  }
+  20% {
+    box-shadow: -1px 1px 0 #222;
+  }
+  25% {
+    box-shadow: -1px 1px 0 #222;
+  }
+  60% {
+    box-shadow: -1px 1px 0 #222;
+  }
+  80% {
+    box-shadow: 0 -2px 0 #222;
+  }
+  85% {
+    box-shadow: 0 -2px 0 #222;
+  }
+  87% {
+    box-shadow: 0 -2px 0 #222;
+  }
+  100% {
+    box-shadow: 0 -2px 0 #222;
+  }
+}
+@keyframes shadow {
+  0% {
+    transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+  5% {
+    transform: rotateX(80deg) rotateY(10deg) rotateZ(0deg);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+  20% {
+    transform: rotateX(30deg) rotateY(-20deg) rotateZ(-20deg);
+    box-shadow: 0 0 50px 30px rgba(0,0,0,0.3);
+  }
+  25% {
+    transform: rotateX(80deg) rotateY(-20deg) rotateZ(50deg);
+    box-shadow: 0 0 35px 15px rgba(0,0,0,0.1);
+  }
+  60% {
+    transform: rotateX(80deg) rotateY(0deg) rotateZ(-50deg) translateX(30px);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+  100% {
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+}
+.links {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.links a {
+  color : #555;
+  margin-left: 10px;
+  text-decoration: none;
+}
+/* macbook end */
+
+
+main{
+width: 1920px;
+height: 880px;
+background-image: url(assets/SL-072622-51930-14.jpg);
+}
+
+#titles {
+    color: white;
+    /*padding-left: 250px;
+    padding-top: 200px;*/
+}
+
+h1 {
+    font-family: Kirgina;
+    font-size: 125pt;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 28pt;
+}
+
+h3 {
+    font-family: Kirgina;
+    font-size: 64pt;
+}
+
+
+
+#maincontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.maintext {
+   padding-top: 20vh;
+}
+
+.profilephoto {
+  width: 600px;
+  height: 500px;
+  padding-left: 25vh;
+  padding-top: 9vh;
+}
+
+.profilephoto img {
+  width: 100%;
+}
+
+.terminalicon {
+    opacity: 95%;
+}
+
+section {
+width: 1920px;
+height: 1080px;
+align-items: center;
+display: flex;
+flex-direction: column;
+}
+
+section h4 {
+color: white;
+font-family: "Kirgina";
+font-size: 4em;
+text-align: center;
+}
+
+
+
+.aboutmetext {
+  width: 70vh;
+}
+
+section p {
+  padding-top: 5vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  
+  font-size: 1.3em;
+  text-align: center;
+
+  }
+
+  span {
+    font-weight: bolder;
+  }
+
+.aboutmearrow {
+  width: 50px;
+  height: 50px;
+  margin-top: 10vh;
+}
+
+.aboutmearrow img {
+  width: 100px;
+  height: 100px;
+}
+
+.aboutme {
+  margin-top: 12vh;
+  margin-bottom: 20vh;
+}
+
+section#skills {
+width: 1920px;
+height: 1150px;
+background-color: #1a1a1a;
+margin-top: 10vh;
+}
+
+
+.skillsdiv {
+  display: flex;
+  flex-direction: row;
+  margin-top: 22vh;
+}
+
+.skillstitle {
+font-family: "Kirgina";
+font-size: 6em;
+text-align: center;
+text-align: left;
+margin-right: 50vh;
+}
+
+.skillstitlediv h5 {
+color: white;
+}
+
+.skillsicon {
+  width: 200px;
+  height: 200px;
+}
+
+.skillsicon img {
+  width: 100px;
+  height: 200px;
+
+}
+
+#SkillCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  gap: 2vh;
+}
+
+.HTMLCard {
+  width: 413px;
+  height: 401px;
+  background-color: #F24822;
+}
+
+.HTMLFACE {
+  width: 13vh;
+  height: 13vh;
+}
+
+.HTMLFACE img {
+  width: 13vh;
+  height: 13vh;
+  transform: rotate(-45deg);
+  margin: 1vh 0vh 0vh 1vh
+}
+
+.HTMLCard h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.HTMLCard p {
+  font-size: 1.2em;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.HTMLP {
+  width: 28vh;
+  margin-left: 9vh;
+}
+
+.CSSCard {
+  width: 413px;
+  height: 401px;
+  background-color: #0D99FF;
+}
+
+.CSSFACE {
+  width: 13vh;
+  height: 12.5vh;
+}
+
+.CSSFACE img {
+  width: 14vh;
+  height: 14vh;
+  transform: rotate(-45deg);
+  margin: 1vh 0vh 0vh 1vh;
+}
+
+.CSSCard h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  
+}
+
+.CSSCard p {
+  font-size: 1.2em;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.CSSP {
+  width: 28vh;
+  margin-left: 9vh;
+}
+
+
+.JSCard {
+  width: 413px;
+  height: 401px;
+  background-color: #F7DF1E;
+}
+
+.JSFACE {
+  width: 12vh;
+  height: 12vh;
+}
+
+.JSFACE img {
+  width: 15vh;
+  height: 15vh;
+  transform: rotate(-45deg);
+  margin: 0.5vh 0vh 0vh 0.5vh;
+}
+
+.JSCard h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.JSCard p {
+  font-size: 1.2em;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.JSP {
+  width: 28vh;
+  margin-left: 9vh;
+}
+
+.assync {
+  display: flex;
+  flex-direction: column;
+}
+
+.asideskills {
+  justify-items: center;
+  margin-left: 2vh;
+  
+}
+
+.asideskills img {
+  width: 80px;
+  margin-top: 5vh;
+  padding-right: 5vh;
+  
+  
+  
+
+  
+}
+
+#calltoaction {
+  
+  width: 1920px;
+  height: 450px;
+  background-color: #F7DF1E;
+  justify-items: center;
+}
+
+.calltoactionform {
+  margin-top: 4vh;
+}
+
+#calltoaction h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+#calltoaction input {
+  width: 35vh;
+  height: 6vh;
+  margin-top: 6vh;
+  border-radius: 1vh;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.input2 {
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+#calltoaction button {
+  width: 6vh;
+  height: 6vh;
+  background-color: #0D99FF;
+  border: none;
+  border-radius: 1vh;
+}
+
+#calltoaction button img {
+  width: 4vh;
+  height: 4vh;
+  padding-right: 0.2vh;
+}
+
+.calltoactionaside {
+  display: flex;
+  flex-direction: row;
+}
+
+.calltoactioninput {
+  color: #000;
+}
+
+.submitbutton1 {
+  margin-top: 6vh;
+}
+
+/* Projects area */
+
+section#projects {
+  width: 1920px;
+  height: 1280px;
+  background-color: #0D0D0D;
+}
+
+.sectiontitle {
+  margin-top: 10vh;
+}
+
+#projects h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.projectcards {
+  width: 800px;
+  height: 780px;
+  justify-items: center;
+  margin-top: 5vh;
+}
+
+/* Projeto 1 */
+
+.projectone {
+  width: 600px;
+  height: 300px;
+  background-color: #1E1E1E;
+  border-radius: 5vh;
+  display: flex;
+}
+
+.projectoneimg {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 5vh;
+}
+
+.projectoneimg img {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 5vh;
+}
+
+.projectonetext {
+width: 30vh;
+height: 31vh;
+margin: 2vh 0vh 0vh 4vh;
+}
+
+.projectonetext h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  color: white;
+}
+
+.projectonetext p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  color: white;
+  margin: 0;
+}
+
+/* Projeto 2 */
+
+.projecttwo {
+  width: 600px;
+  height: 300px;
+  background-color: #1E1E1E;
+  border-radius: 5vh;
+  display: flex;
+  margin-top: 5vh;
+}
+
+.projecttwoimg {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 5vh;
+}
+
+.projecttwoimg img {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 5vh;
+}
+
+.projecttwotext {
+width: 30vh;
+height: 31vh;
+margin: 2vh 0vh 0vh 4vh;
+}
+
+.projecttwotext h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  color: white;
+}
+
+.projecttwotext p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  color: white;
+  margin: 0;
+}
+
+/* Projeto 3*/
+
+.projectthree {
+  width: 600px;
+  height: 300px;
+  background-color: #1E1E1E;
+  border-radius: 5vh;
+  display: flex;
+  margin-top: 5vh;
+}
+
+.projectthreeimg {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 5vh;
+}
+
+.projectthreeimg img {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 5vh;
+}
+
+.projectthreetext {
+width: 30vh;
+height: 31vh;
+margin: 2vh 0vh 0vh 4vh;
+}
+
+.projectthreetext h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  color: white;
+}
+
+.projectthreetext p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  color: white;
+  margin: 0;
+}
+
+/* Call to action 2*/
+#comments {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.commentstitle {
+  width: 900px;
+  height: 100px;
+  margin-top: 10vh;
+}
+
+.aspas {
+  width: 4vh;
+  height: 4vh;
+}
+
+.aspas img {
+  width: 4vh;
+  height: 4vh;
+}
+
+.gradient-text {
+  font-size: 2em; /* Ajuste o tamanho conforme necessário */
+  font-weight: bold;
+  background: linear-gradient(110deg, #ffffff, #a3a3a3, rgb(90, 90, 90)); /* Escolha as cores do gradiente */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Necessário para o efeito de gradiente */
+  margin-top: 29vh;
+}
+
+.commentscards {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Alinha as divs no início sem espaços extras */
+  align-items: flex-start;
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 0; /* Remove padding adicional, se houver */
+  margin-top: 25vh; /* Mantém o espaço superior */
+}
+
+.commentone, .commenttwo, .commentthree {
+  width: 380px; /* Reduz a largura para garantir que todos os cards caibam */
+  height: 300px;
+  box-sizing: border-box;
+  
+}
+
+.commentone p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 2vh;
+  width: 380px;
+  height: 100px;
+}
+
+
+.commenttwo p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 2vh;
+  width: 380px;
+  height: 100px;
+}
+
+
+.commentthree p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 2vh;
+  width: 380px;
+  height: 100px;
+}
+
+.profilephoto1 {
+  display: flex;
+}
+
+.profilephoto1 img {
+  margin-top: 2vh;
+  width: 60px;
+  height: 60px;
+  border-radius: 6vh;
+}
+
+
+.commentone span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 4.5vh;
+  margin-left: 2vh;
+}
+
+.profilephoto2 {
+  display: flex;
+}
+
+.profilephoto2 img {
+  margin-top: 2vh;
+  width: 60px;
+  height: 60px;
+  border-radius: 6vh;
+}
+
+
+.commenttwo span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 4.5vh;
+  margin-left: 2vh;
+}
+
+.profilephoto3 {
+  display: flex;
+}
+
+.profilephoto3 img {
+  margin-top: 2vh;
+  width: 60px;
+  height: 60px;
+  border-radius: 6vh;
+}
+
+
+.commentthree span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 4.5vh;
+  margin-left: 2vh;
+}
+
+footer {
+  width: 1920px;
+  height: 500px;
+  background-color: #000;
+  text-align: center;
+}
+
+footer h1 {
+ color: white;
+ font-size: 6em;
+ padding-top: 8vh;
+}
+
+.finalapresent {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25vh;
+  padding-top: 5vh;
+}
+
+.finalhorizon {
+  display: flex;
+}
+
+footer h2 {
+  color: white;
+ font-size: 1em;
+ margin: 2vh 2vh 1vh 1vh;
+}
+
+footer img {
+  width: 80px;
+  height: 80px;
+}
+
+footer p {
+  color: white;
+ font-size: 1em;
+ text-align: justify;
+}
+
+footer strong {
+  color: white;
+}
+
+.footercontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 70vh;
+  margin-top: 6vh;
+}
+
+.footercontentone {
+width: 500px;
+height: 250px;
+}
+
+.footercontenttwo {
+  width: 500px;
+  height: 250px;
+  }
+
+
+.footerlinks {
+  display: flex; /* Distribui os itens horizontalmente */
+  gap: 20vh;
+  margin-top: 4vh;
+}
+
+.footerlinks li {
+  color: white;
+  list-style: none;
+  margin-top: 1vh;
+}
+
+.footerlinks li:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Para tablets (largura entre 769px e 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  #maincontent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #apresentation {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .aboutmearrow {
+    margin-right: 4vh;
+  }
+
+  .maintext {
+    padding: 0;
+    margin: 0;
+  }
+
+  .arrowmain {
+    display: none;
+  }
+
+  .macbook {
+    width: 120px;
+    height: 80px;
+    left: 54%;
+    top: 112vh;
+    transform: translateX(-50%);
+  }
+
+  #titles {
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 100pt;
+  }
+
+  h2 {
+    font-size: 24pt;
+  }
+
+  h3 {
+    font-size: 56pt;
+  }
+
+
+
+  .profilephoto {
+    width: 437px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  section {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .aboutmetext {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  section p {
+    font-size: 1.1em;
+  }
+
+  #skills {
+    height: 100% !important;
+    margin-top: 5vh;
+    width: 100% !important;
+    
+  }
+
+  .skillsicon{
+    display: none;
+  }
+
+  .skillcards {
+    display: flex;
+  }
+
+  .HTMLCard {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .HTMLFACE {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .HTMLCard img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .HTMLT h1 {
+    font-size: 1em;
+  }
+
+  .HTMLP {
+    margin: 0;
+    width: 200px;
+  }
+
+  .HTMLP P {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0.8vh;
+  }
+
+
+  .CSSCard {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .CSSFACE {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+  
+  .CSSCard img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .CSST h1 {
+    font-size: 1em;
+  }
+
+  .CSSP {
+    margin: 0;
+    width: 200px;
+  }
+
+  .CSSP P {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0.8vh;
+  }
+
+  .JSCard {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .JSFACE {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .JSCard img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .JST h1 {
+    font-size: 1em;
+  }
+
+  .JSP {
+    margin: 0;
+    width: 200px;
+  }
+
+  .JSP P {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0.8vh;
+  }
+
+
+  .skillsdiv {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+  }
+
+  .skillstitle {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 4vh;
+  }
+
+  .skillsicon {
+    width: 150px;
+    height: 150px;
+  }
+
+  #SkillCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vh;
+  }
+
+  #calltoaction {
+    width: 100%;
+  }
+
+  #calltoaction h1 {
+    padding-top: 12vh;
+  }
+
+  .calltoactioninput{
+    width: 100%;
+  }
+
+  #calltoaction input {
+    width: 220px;
+  }
+
+  #projects {
+    width: 100% !important;
+  }
+
+  #comments {
+    width: 100% !important;
+    height: 1180px;
+  }
+
+  .gradient-text {
+    margin-top: 8vh;
+  }
+
+  .commentscards {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+  }
+
+  .commentone, .commenttwo, .commentthree {
+    width: 300px;
+    height: 300px;
+  }
+
+  .commentone p, .commenttwo p, .commentthree p {
+    width: 300px;
+    margin-bottom: 2vh;
+    
+  }
+  /*Footer*/
+
+  footer {
+    width: 100%; /* Define largura como 100% da tela */
+    height: auto; /* Altura se ajusta ao conteúdo */
+    padding: 20px; /* Adiciona espaçamento interno */
+  }
+
+  footer h1 {
+    font-size: 4em; /* Reduz tamanho do texto */
+    padding-top: 4vh; /* Ajusta espaçamento superior */
+  }
+
+  .finalapresent {
+    padding-left: 18vh; /* Reduz margem lateral */
+    padding-top: 3vh; /* Reduz margem superior */
+  }
+
+  .finalapresent img {
+    margin-top: 1vh;
+    margin-right: 1vh;
+  }
+
+  .footercontent {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 5vh; /* Reduz o espaçamento entre os elementos */
+  }
+
+  .footercontentone,
+  .footercontenttwo {
+    width: 80%; /* Ocupa 80% da largura da tela */
+    height: auto; /* Altura ajustada ao conteúdo */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .footerlinks {
+    flex-direction: column; /* Empilha os links verticalmente */
+    gap: 2vh; /* Reduz o espaçamento entre os links */
+    margin-top: 3vh; /* Ajusta o espaçamento superior */
+    align-items: center; /* Centraliza os links */
+  }
+
+  .footerlinks li {
+    font-size: 1.2em; /* Aumenta a legibilidade dos links */
+  }
+
+  footer img {
+    width: 60px; /* Reduz o tamanho das imagens */
+    height: 60px;
+  }
+
+  footer h2 {
+    font-size: 1.5em; /* Ajusta o tamanho da fonte */
+    margin: 2vh 0; /* Ajusta margens */
+  }
+
+  footer p {
+    font-size: 1em; /* Ajusta tamanho do texto */
+    margin: 0 10px; /* Adiciona margens laterais */
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  main{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 760px;
+  }
+  
+  #maincontent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #maincontent h1 {
+  font-size: 5em ;
+  }
+
+  .terminalicon {
+    width: 60px;
+    height: 60px;
+    padding-top: 2vh;
+  }
+
+  .profilephoto {
+    width: 384px !important;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  #apresentation {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .aboutmearrow {
+    width: 100px;
+    height: 100px;
+    margin-top: 4vh;
+  }
+
+  .maintext {
+    padding: 0;
+    margin: 0;
+  }
+
+  .arrowmain {
+    display: none;
+  }
+
+  .macbook {
+    width: 120px;
+    height: 80px;
+    left: 58%;
+    top: 138vh;
+    transform: translateX(-50%);
+  }
+
+  #titles {
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 100pt;
+  }
+
+  h2 {
+    font-size: 24pt;
+  }
+
+  h3 {
+    font-size: 56pt;
+  }
+
+  h5 {
+    width: 200px;
+    text-align: center;
+    margin-left: 8.1vh;
+  }
+
+  section {
+    width: 100%;
+    
+  }
+
+  .aboutmetext {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  section p {
+    font-size: 1.1em;
+  }
+
+  .asideskills {
+    margin-bottom: 8vh;
+  }
+
+  .asideskills img{
+    width: 60px;
+  }
+
+  #skills {
+    height: 100% !important;
+    margin-top: 5vh;
+    width: 100% !important;
+    
+  }
+
+  .skillsicon{
+    display: none;
+  }
+
+  .skillcards {
+    display: flex;
+  }
+
+  .HTMLCard {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .HTMLFACE {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .HTMLCard img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .HTMLT h1 {
+    font-size: 1em;
+  }
+
+  .HTMLP {
+    margin: 0;
+    width: 200px;
+  }
+
+  .HTMLP P {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0.8vh;
+  }
+
+
+  .CSSCard {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .CSSFACE {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+  
+  .CSSCard img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .CSST h1 {
+    font-size: 1em;
+  }
+
+  .CSSP {
+    margin: 0;
+    width: 200px;
+  }
+
+  .CSSP P {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0.8vh;
+  }
+
+  .JSCard {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .JSFACE {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .JSCard img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5vh;
+  }
+
+  .JST h1 {
+    font-size: 1em;
+  }
+
+  .JSP {
+    margin: 0;
+    width: 200px;
+  }
+
+  .JSP P {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0.8vh;
+  }
+
+
+  .skillsdiv {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+  }
+
+
+  .skillstitle {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 4vh;
+    font-size: 8vh;
+  }
+
+  .skillsicon {
+    width: 150px;
+    height: 150px;
+  }
+
+  #SkillCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vh;
+  }
+
+  #calltoaction {
+    width: 100%;
+  }
+
+  #calltoaction h1 {
+    padding-top: 16vh;
+    font-size: 2.5em;
+  }
+
+  .calltoactioninput{
+    width: 100%;
+  }
+
+  #calltoaction input {
+    width: 145px;
+  }
+
+  #projects {
+    width: 100% !important;
+    height: 1100px !important;
+  }
+
+  #projects h1 {
+    font-size: 2.3em;
+  }
+
+  .projectcards {
+    width: 100% ;
+  }
+
+  .projectone {
+    width: 420px;
+    height: 210px;
+  }
+
+  .projectone img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .projectonetext {
+    font-size: 0.8em;
+  }
+
+  .projecttwo {
+    width: 420px;
+    height: 210px;
+  }
+
+  .projecttwo img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .projecttwotext {
+    font-size: 0.8em;
+  }
+
+  .projectthree {
+    width: 420px;
+    height: 210px;
+  }
+
+  .projectthree img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .projectthreetext {
+    font-size: 0.8em;
+    margin: 2vh 1vh 0vh 0vh;
+  }
+
+  #comments {
+    width: 100% !important;
+    height: 1180px;
+  }
+
+  #comments p {
+    margin-bottom: 5vh;
+  }
+
+
+  .gradient-text {
+    margin-top: 8vh;
+    text-align: center;
+  }
+
+  .gradient-text h2 {
+    font-size: 0.8em;
+  }
+
+  .commentscards {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+  }
+
+  .commentone, .commenttwo, .commentthree {
+    width: 300px;
+    height: 300px;
+  }
+
+  .commentone p, .commenttwo p, .commentthree p {
+    width: 300px;
+    margin-bottom: 2vh;
+    
+  }
+  /*Footer*/
+
+  footer {
+    width: 100%; /* Define largura como 100% da tela */
+    height: auto; /* Altura se ajusta ao conteúdo */
+    padding: 0; /* Adiciona espaçamento interno */
+  }
+
+  footer h1 {
+    font-size: 3em; /* Reduz tamanho do texto */
+    padding-top: 8vh; /* Ajusta espaçamento superior */
+  }
+
+  .finalapresent {
+    padding-left: 5vh; /* Reduz margem lateral */
+    padding-top: 3vh; /* Reduz margem superior */
+  }
+
+  .finalapresent img {
+    margin-top: 1vh;
+    margin-right: 1vh;
+  }
+
+  .footercontent {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 5vh; /* Reduz o espaçamento entre os elementos */
+  }
+
+  .footercontentone,
+  .footercontenttwo {
+    width: 80%; /* Ocupa 80% da largura da tela */
+    height: auto; /* Altura ajustada ao conteúdo */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .footerlinks {
+    flex-direction: column; /* Empilha os links verticalmente */
+    gap: 2vh; /* Reduz o espaçamento entre os links */
+    margin-top: 3vh; /* Ajusta o espaçamento superior */
+    align-items: center; /* Centraliza os links */
+  }
+
+  .footerlinks li {
+    font-size: 1.2em; /* Aumenta a legibilidade dos links */
+  }
+
+  footer img {
+    width: 60px; /* Reduz o tamanho das imagens */
+    height: 60px;
+  }
+
+  footer h2 {
+    font-size: 1.5em; /* Ajusta o tamanho da fonte */
+    margin: 2vh 0; /* Ajusta margens */
+  }
+
+  footer p {
+    font-size: 1em; /* Ajusta tamanho do texto */
+    margin: 0 10px; /* Adiciona margens laterais */
+  }
+}
+
+
+
+
+
+
+
+
+
